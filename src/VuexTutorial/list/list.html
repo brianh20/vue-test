@@ -1,0 +1,7 @@
+<div class="list">
+	<hr>
+	Subscribed:
+	<div v-for="user in users" v-if="user.registered">
+		Name: {{user.name}} || Registered: {{user.registered}} <p style="display: inline; cursor:pointer;" v-on:click="unregister(user)"> REMOVE </p>
+	</div>
+</div>

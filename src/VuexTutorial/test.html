@@ -1,0 +1,9 @@
+<div class="test">
+	<p>This is my Vuex test.</p>
+	Unsubscribed:
+	<div v-for="user in this.users" v-if="!user.registered">
+		Name: {{user.name}} || Registered: {{user.registered}} <p style="display:inline; cursor:pointer;" v-on:click="register(user)"> ADD </p>
+	</div>
+	<vuex-list :users="users" v-on:userUnregistered="removeRegistration"></vuex-list>
+	<hr>
+</div>
